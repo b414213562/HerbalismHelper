@@ -26,7 +26,7 @@ LocalPlayer.TargetChanged = function(sender, args)
         SelectedTargetName = target:GetName();
         local herb = HerbalismFloraLookup[SelectedTargetName];
         if (herb) then
-            local output = SelectedTargetName .. ": " .. HerbalismFlora[herb]["YIELDS"];
+            local output = FloraYieldsToString(HerbalismFlora[herb]);
             Debug(output);
         end
     else
