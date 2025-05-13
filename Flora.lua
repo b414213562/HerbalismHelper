@@ -131,11 +131,12 @@ HerbalismFloraEn = {
         ["FOUND_IN"] = "North Ithilien and the Wastes",
         ["YIELDS"] = "4-5 phials of assorted extracts",
         -- Sample loots:
+        -- [3 Phials of Umber Extract], [1 Phial of Crimson Extract]
         -- [3 Phials of Umber Extract], [2 Phials of Verdant Extract]
         -- [2 Phials of Umber Extract], [2 Phials of Verdant Extract]
         -- [4 Phials of Umber Extract]
         -- [2 Phials of Umber Extract], [1 Phial of Crimson Extract], [2 Phials of Verdant Extract]
-        -- [3 Phials of Umber Extract], [1 Phial of Crimson Extract]
+        -- [3 Phials of Umber Extract], [1 Phial of Crimson Extract], [1 Phials of Verdant Extract]
         -- 
     },
     [WRAITHSCOWL] = {
