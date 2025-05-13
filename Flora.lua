@@ -81,42 +81,34 @@ HerbalismFloraEn = {
     [DWARFSBEARD] = {
         ["FOUND_IN"] = "North Ithilien and the Wastes",
         ["YIELDS"] = "1 Phial of Umber Extract",
-        ["QUALITY"] = 1,
     },
     [ELFSPEAR] = {
         ["FOUND_IN"] = "North Ithilien",
         ["YIELDS"] = "1 Phial of Verdant Extract",
-        ["QUALITY"] = 1,
     },
     [SOUTHRONS_CROWN] = {
         ["FOUND_IN"] = "North Ithilien",
         ["YIELDS"] = "1 Phial of Crimson Extract",
-        ["QUALITY"] = 1,
     },
     [HORSETAIL] = {
         ["FOUND_IN"] = "North Ithilien and the Wastes",
         ["YIELDS"] = "2 Phials of Umber Extract",
-        ["QUALITY"] = 1,
     },
     [OXLIP] = {
         ["FOUND_IN"] = "North Ithilien",
         ["YIELDS"] = "2 Phials of Verdant Extract",
-        ["QUALITY"] = 1,
     },
     [VETCHLING] = {
         ["FOUND_IN"] = "North Ithilien",
         ["YIELDS"] = "2 Phials of Crimson Extract",
-        ["QUALITY"] = 1,
     },
     [DRAKEWORT] = {
         ["FOUND_IN"] = "North Ithilien",
         ["YIELDS"] = "3 phials of assorted extracts",
-        ["QUALITY"] = 1,
     },
     [BELL_O_DALE] = {
         ["FOUND_IN"] = "North Ithilien",
         ["YIELDS"] = "3 phials of assorted extracts",
-        ["QUALITY"] = 1,
         -- Sample loots:
         -- [1 Phial of Sapphire Extract], [1 Phial of Verdant Extract], [1 Phial of Crimson Extract]
         -- [2 Phials of Verdant Extract], [1 Phial of Crimson Extract]
@@ -126,21 +118,18 @@ HerbalismFloraEn = {
     [BUCKTHORN] = {
         ["FOUND_IN"] = "North Ithilien",
         ["YIELDS"] = "4-5 phials of assorted extracts",
-        ["QUALITY"] = 1,
         -- Sample loots:
         -- [2 Phials of Verdant Extract], [2 Phials of Umber Extract]
     },
     [ROCK_ROSE] = {
         ["FOUND_IN"] = "North Ithilien",
         ["YIELDS"] = "4-5 phials of assorted extracts",
-        ["QUALITY"] = 1,
         -- Sample loots:
         -- [3 Phials of Crimson Extract], [1 Phials of Umber Extract], [1 Phials of Verdant Extract]
     },
     [LARKSPUR] = {
         ["FOUND_IN"] = "North Ithilien and the Wastes",
         ["YIELDS"] = "4-5 phials of assorted extracts",
-        ["QUALITY"] = 1,
         -- Sample loots:
         -- [3 Phials of Umber Extract], [2 Phials of Verdant Extract]
         -- [2 Phials of Umber Extract], [2 Phials of Verdant Extract]
@@ -152,32 +141,26 @@ HerbalismFloraEn = {
     [WRAITHSCOWL] = {
         ["FOUND_IN"] = "The Wastes (during day)",
         ["YIELDS"] = "1-2 Phials of Violet Extract",
-        ["QUALITY"] = 1,
     },
     [DUSKNETTLE] = {
         ["FOUND_IN"] = "The Wastes",
         ["YIELDS"] = "2-4 Phial of Violet Extract",
-        ["QUALITY"] = 1,
     },
     [BONEMALLOW] = {
         ["FOUND_IN"] = "The Wastes",
         ["YIELDS"] = "2-4 Phial of Violet Extract",
-        ["QUALITY"] = 1,
     },
     [EVENGLEAM] = {
         ["FOUND_IN"] = "The Wastes",
         ["YIELDS"] = "1-2 Phials of Golden Extract",
-        ["QUALITY"] = 1,
     },
     [MOURNWEED] = {
         ["FOUND_IN"] = "The Wastes",
         ["YIELDS"] = "1-2 Phials of Golden Extract",
-        ["QUALITY"] = 1,
     },
     [EYE_OF_NIGHT] = {
         ["FOUND_IN"] = "The Wastes (during night)",
         ["YIELDS"] = "2-3 Phials of Golden Extract",
-        ["QUALITY"] = 1,
     },
 };
 
