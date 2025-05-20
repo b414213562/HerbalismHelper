@@ -85,9 +85,21 @@ function FloraYieldsToString(flora, isFatefulToolkitEquipped)
     for key, value in ipairs(flora.YIELDS) do
         local count = "";
         if (value.MIN == value.MAX) then
-            count = value.MIN;
+            if (isFatefulToolkitEquipped) then
+                count = (value.MIN + 1);
+            else
+                count = value.MIN;
+            end
         else
-            count = value.MIN .. "-" .. value.MAX;
+            if (isFatefulToolkitEquipped) then
+                if (value.MIN == 0) then
+                    count = value.MIN .. "-" .. (value.MAX + 1);
+                else
+                    count = (value.MIN + 1) .. "-" .. (value.MAX + 1);
+                end
+            else
+                count = value.MIN .. "-" .. value.MAX;
+            end
         end
 
         -- TODO: Localize this, this is bad.
@@ -99,7 +111,19 @@ function FloraYieldsToString(flora, isFatefulToolkitEquipped)
         local yield = count .. " " .. phial .. " of " .. HerbalismPhialLookup[value.PHIAL] .. " Extract";
         if (text) then
             text = text .. " / " .. yield;
-            expectedMinMax = " (" .. flora.YIELDS.MIN .. "-" .. flora.YIELDS.MAX .. " total)";
+
+            local min = flora.YIELDS.MIN;
+            local max = flora.YIELDS.MAX;
+
+            if (isFatefulToolkitEquipped) then
+                min = min + 1;
+                max = max + #flora.YIELDS;
+            end
+            if (min == max) then
+                expectedMinMax = " (" .. min  .. " total)";
+            else
+                expectedMinMax = " (" .. min .. "-" .. max .. " total)";
+            end
         else
             text = flora.NAME .. ": " .. yield;
         end
