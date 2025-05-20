@@ -20,6 +20,10 @@ SelectedTargetName = nil;
 
 LocalPlayer = Turbine.Gameplay.LocalPlayer.GetInstance();
 LocalPlayer.TargetChanged = function(sender, args)
+    HandleTargetChanged();
+end
+
+function HandleTargetChanged()
     local target = LocalPlayer:GetTarget();
 
     if (target) then
@@ -33,3 +37,10 @@ LocalPlayer.TargetChanged = function(sender, args)
         SelectedTargetName = nil;
     end
 end
+
+-- Do plugin startup things:
+function Main()
+    HandleTargetChanged();
+
+end
+Main();
