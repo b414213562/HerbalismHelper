@@ -7,6 +7,8 @@ import "CubePlugins.HerbalismHelper.Strings";
 import "CubePlugins.HerbalismHelper.GeneralFunctions";
 import "CubePlugins.HerbalismHelper.Flora";
 
+import "CubePlugins.HerbalismHelper.Images";
+
 LocalPlayer = Turbine.Gameplay.LocalPlayer.GetInstance();
 
 function RegisterTargetChanged()
