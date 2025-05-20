@@ -21,12 +21,15 @@ function HandleTargetChanged()
     if (target) then
         local herb = HerbalismFloraLookup[target:GetName()];
         if (herb) then
-            local output = FloraYieldsToString(HerbalismFlora[herb]);
-            Debug(output);
+            HandleHerbTarget(herb);
         end
     end
 end
 
+function HandleHerbTarget(herb)
+    local output = FloraYieldsToString(HerbalismFlora[herb], isFatefulToolkitEquipped);
+    Debug(output);
+end
 -- Do plugin startup things:
 function Main()
     RegisterTargetChanged();
