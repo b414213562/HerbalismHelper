@@ -27,9 +27,24 @@ function HandleTargetChanged()
 end
 
 function HandleHerbTarget(herb)
+    local isFatefulToolkitEquipped = IsFatefulToolkitEquipped();
+
     local output = FloraYieldsToString(HerbalismFlora[herb], isFatefulToolkitEquipped);
     Debug(output);
 end
+
+function IsFatefulToolkitEquipped()
+    local result = false;
+
+    local equipment = LocalPlayer:GetEquipment();
+    local craftTool = equipment:GetItem(Turbine.Gameplay.Equipment.CraftTool);
+    if (craftTool and craftTool:GetName() == _LANG["FATEFUL_TOOLKIT"]) then
+        result = true;
+    end
+
+    return result;
+end
+
 -- Do plugin startup things:
 function Main()
     RegisterTargetChanged();
