@@ -30,10 +30,11 @@ function HandleTargetChanged()
 end
 
 function HandleHerbTarget(herb)
-    local isFatefulToolkitEquipped = IsFatefulToolkitEquipped();
 
-    local output = FloraYieldsToString(HerbalismFlora[herb], isFatefulToolkitEquipped);
-    Debug(output);
+    if (herb) then
+        local output = FloraYieldsToString(HerbalismFlora[herb]);
+        Debug(output);
+    end
 end
 
 function IsFatefulToolkitEquipped()

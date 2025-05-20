@@ -76,7 +76,9 @@ HerbalismFloraLookupEn = {
 
 HerbalismFloraLookup = HerbalismFloraLookupEn;
 
-function FloraYieldsToString(flora, isFatefulToolkitEquipped)
+function FloraYieldsToString(flora)
+    local isFatefulToolkitEquipped = IsFatefulToolkitEquipped();
+
     local text = nil;
 
     local expectedMinMax = nil;
