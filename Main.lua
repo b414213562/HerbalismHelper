@@ -22,15 +22,15 @@ end
 function HandleTargetChanged()
     local target = LocalPlayer:GetTarget();
 
+    local herb = nil;
     if (target) then
-        local herb = HerbalismFloraLookup[target:GetName()];
-        if (herb) then
-            HandleHerbTarget(herb);
-        end
+        herb = HerbalismFloraLookup[target:GetName()];
     end
+    HandleHerbTarget(herb);
 end
 
 function HandleHerbTarget(herb)
+    TargetWindow.GetInstance():ShowLoot(herb);
 
     if (herb) then
         local output = FloraYieldsToString(HerbalismFlora[herb]);
