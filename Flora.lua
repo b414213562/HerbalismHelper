@@ -183,6 +183,11 @@ HerbalismFloraEn = {
     [FLORA_DRAKEWORT] = {
         ["NAME"] = "Drakewort",
         ["FOUND_IN"] = "North Ithilien",
+        -- Sample loots:
+        -- [Phial of Umber Extract], [2 Phials of Verdant Extract]
+        -- [Phial of Crimson Extract], [2 Phials of Umber Extract]
+        -- [2 Phials of Crimson Extract], [Phial of Verdant Extract]
+        --
         ["YIELDS"] = {
             [1] = {
                 ["PHIAL"] = PHIAL_CRIMSON,
@@ -259,6 +264,8 @@ HerbalismFloraEn = {
         -- [3 Phials of Crimson Extract], [1 Phials of Umber Extract], [1 Phials of Verdant Extract]
         -- [4 Phials of Crimson Extract]
         -- [2 Phials of Crimson Extract], [1 Phials of Verdant Extract], [2 Phials of Umber Extract]
+        -- [4 Phials of Crimson Extract], [Phial of Umber Extract]
+        --
         ["YIELDS"] = {
             [1] = {
                 ["PHIAL"] = PHIAL_CRIMSON,
