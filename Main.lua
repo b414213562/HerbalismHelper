@@ -16,8 +16,6 @@ If target has the name of one of the herbalism flowers,
 
 ]]
 
-SelectedTargetName = nil;
-
 LocalPlayer = Turbine.Gameplay.LocalPlayer.GetInstance();
 LocalPlayer.TargetChanged = function(sender, args)
     HandleTargetChanged();
@@ -27,14 +25,11 @@ function HandleTargetChanged()
     local target = LocalPlayer:GetTarget();
 
     if (target) then
-        SelectedTargetName = target:GetName();
-        local herb = HerbalismFloraLookup[SelectedTargetName];
+        local herb = HerbalismFloraLookup[target:GetName()];
         if (herb) then
             local output = FloraYieldsToString(HerbalismFlora[herb]);
             Debug(output);
         end
-    else
-        SelectedTargetName = nil;
     end
 end
 
