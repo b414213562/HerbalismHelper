@@ -7,8 +7,11 @@ import "CubePlugins.HerbalismHelper.GeneralFunctions";
 import "CubePlugins.HerbalismHelper.Flora";
 
 LocalPlayer = Turbine.Gameplay.LocalPlayer.GetInstance();
-LocalPlayer.TargetChanged = function(sender, args)
-    HandleTargetChanged();
+
+function RegisterTargetChanged()
+    LocalPlayer.TargetChanged = function(sender, args)
+        HandleTargetChanged();
+    end
 end
 
 function HandleTargetChanged()
@@ -25,6 +28,7 @@ end
 
 -- Do plugin startup things:
 function Main()
+    RegisterTargetChanged();
     HandleTargetChanged();
 
 end
