@@ -2,6 +2,7 @@ import "Turbine";
 import "Turbine.Gameplay";
 import "Turbine.UI";
 import "Turbine.UI.Lotro";
+import "CubePlugins.HerbalismHelper.TurbineFiles.Class";
 
 import "CubePlugins.HerbalismHelper.Strings";
 import "CubePlugins.HerbalismHelper.GeneralFunctions";
