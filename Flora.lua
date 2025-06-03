@@ -24,6 +24,14 @@ PHIAL_VIOLET = 5;
 PHIAL_AMBER = 6;
 PHIAL_SAPPHIRE = 7;
 
+HerbIcons = {
+    [PHIAL_CRIMSON] = 0x411A2B85;
+    [PHIAL_UMBER] = 0x411A2B7F;
+    [PHIAL_VERDANT] = 0x411A2B7A;
+    [PHIAL_GOLDEN] = 0x411A2B82;
+    [PHIAL_VIOLET] = 0x411A2B84;
+};
+
 HerbalismPhialLookupEn = {
     [PHIAL_CRIMSON] = "Crimson",
     [PHIAL_UMBER] = "Umber",
