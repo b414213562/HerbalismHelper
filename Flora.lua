@@ -405,7 +405,7 @@ HerbalismFloraEn = {
             [1] = {
                 ["PHIAL"] = PHIAL_GOLDEN,
                 ["MIN"] = 2,
-                ["MAX"] = 3,
+                ["MAX"] = 4,
             };
         };
     },
