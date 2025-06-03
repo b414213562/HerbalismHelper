@@ -50,9 +50,35 @@ function IsFatefulToolkitEquipped()
     return result;
 end
 
+ItemUnequippedHandler = Turbine.UI.Control();
+ItemUnequippedHandler.Update = function(sender, args)
+    ItemUnequippedHandler:SetWantsUpdates(false);
+
+    HandleTargetChanged();
+end
+
+function RegisterEquipmentChanged()
+    local equipment = LocalPlayer:GetEquipment();
+
+    equipment.ItemEquipped = function(sender, args)
+        if (args.Index == Turbine.Gameplay.Equipment.CraftTool) then
+            HandleTargetChanged();
+        end
+    end
+
+    equipment.ItemUnequipped = function(sender, args)
+        if (args.Index == Turbine.Gameplay.Equipment.CraftTool) then
+            ItemUnequippedHandler:SetWantsUpdates(true);
+        end
+    end
+
+end
+
 -- Do plugin startup things:
 function Main()
     RegisterTargetChanged();
+    RegisterEquipmentChanged();
+
     HandleTargetChanged();
 
 end
