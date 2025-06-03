@@ -104,7 +104,7 @@ function FloraYieldsToString(flora)
             end
         end
 
-        -- TODO: Localize this, this is bad.
+        -- This is only for console output, no need to localize.
         local phial = "Phials";
         if (count == 1) then
             phial = "Phial";
