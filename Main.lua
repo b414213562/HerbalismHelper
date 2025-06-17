@@ -102,5 +102,7 @@ function Main()
     local optionsControl = CreateOptionsControl();
     -- RegisterOptionsControl(optionsControl);
 
+    Turbine.Shell.WriteLine(L["STATUS"].LOADED);
+
 end
 Main();
