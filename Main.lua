@@ -4,7 +4,10 @@ import "Turbine.UI";
 import "Turbine.UI.Lotro";
 import "CubePlugins.HerbalismHelper.TurbineFiles.Class";
 
-import "CubePlugins.HerbalismHelper.Strings";
+import "CubePlugins.HerbalismHelper.L.en";
+import "CubePlugins.HerbalismHelper.L.de";
+import "CubePlugins.HerbalismHelper.L.fr";
+
 import "CubePlugins.HerbalismHelper.GeneralFunctions";
 import "CubePlugins.HerbalismHelper.Flora";
 
@@ -43,7 +46,7 @@ function IsFatefulToolkitEquipped()
 
     local equipment = LocalPlayer:GetEquipment();
     local craftTool = equipment:GetItem(Turbine.Gameplay.Equipment.CraftTool);
-    if (craftTool and craftTool:GetName() == _LANG["FATEFUL_TOOLKIT"]) then
+    if (craftTool and craftTool:GetName() == L["FATEFUL_TOOLKIT"]) then
         result = true;
     end
 
