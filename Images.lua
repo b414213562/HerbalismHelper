@@ -1,7 +1,7 @@
 ResourcesDir = "CubePlugins/HerbalismHelper/Resources/";
 
 _IMAGES = {
-    ["TARGET_WINDOW_BACKGROUND"] = ResourcesDir .. "TargetWindowBackground.tga";
+    ["OPPONENT_VITALS_BACKGROUND"] = ResourcesDir .. "OpponentVitals140pct.tga";
 
     -- Phials:
     ["PHIAL_CRIMSON_EXTRACT"] = 0x411A2B85;

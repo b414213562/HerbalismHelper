@@ -20,7 +20,7 @@ function TargetWindow:Constructor()
     -- other initialization here:
     self:SetSize(314, 80);
     self:SetPosition(557, 150);
-    self:SetBackground(_IMAGES.TARGET_WINDOW_BACKGROUND);
+    self:SetBackground(_IMAGES.OPPONENT_VITALS_BACKGROUND.IMAGE);
     self.leftMargin = 11;
     self.topMargin = 9;
     self.rightMargin = 11;
