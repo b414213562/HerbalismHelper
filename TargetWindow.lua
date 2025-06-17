@@ -85,6 +85,30 @@ function TargetWindow:Constructor()
 
 end
 
+function TargetWindow:Redraw()
+    -- Note: This code does not currently work.
+    -- My hypothesis is that it is not playing well with the Windows for each phial.
+    -- Those are needed to do opacity on the in-game icon.
+    -- So, the next thing to try:
+    --   Extract out the phial images
+    --   Make them 25% opaque in an editing program
+    --   Use those images when we need to be opaque, instead of programmatically making them opaque
+
+
+    -- local scalingValue = SETTINGS["OPPONENT_VITALS_WINDOW"].SCALING / 100;
+
+    -- local startingWidth = _IMAGES.OPPONENT_VITALS_BACKGROUND.WIDTH;
+    -- local startingHeight = _IMAGES.OPPONENT_VITALS_BACKGROUND.HEIGHT;
+
+    -- local scaledWidth = scalingValue * startingWidth;
+    -- local scaledHeight = scalingValue * startingHeight;
+
+    -- self:SetStretchMode(1);
+    -- self:SetSize(
+    --     scaledWidth,
+    --     scaledHeight);
+end
+
 function TargetWindow:ShowLoot(herb)
     if (not herb) then
         self:SetVisible(false);

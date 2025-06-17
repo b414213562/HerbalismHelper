@@ -12,6 +12,8 @@ import "CubePlugins.HerbalismHelper.GeneralFunctions";
 import "CubePlugins.HerbalismHelper.Flora";
 
 import "CubePlugins.HerbalismHelper.Settings";
+import "CubePlugins.HerbalismHelper.Options";
+
 import "CubePlugins.HerbalismHelper.Images";
 import "CubePlugins.HerbalismHelper.TargetWindow";
 
@@ -95,6 +97,10 @@ function Main()
     RegisterEquipmentChanged();
 
     HandleTargetChanged();
+
+    -- Make an options panel:
+    local optionsControl = CreateOptionsControl();
+    -- RegisterOptionsControl(optionsControl);
 
 end
 Main();
