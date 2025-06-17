@@ -1,7 +1,11 @@
 ResourcesDir = "CubePlugins/HerbalismHelper/Resources/";
 
 _IMAGES = {
-    ["OPPONENT_VITALS_BACKGROUND"] = ResourcesDir .. "OpponentVitals140pct.tga";
+    ["OPPONENT_VITALS_BACKGROUND"] = {
+        ["IMAGE"] = ResourcesDir .. "OpponentVitals100pct.tga";
+        ["WIDTH"] = 225;
+        ["HEIGHT"] = 58;
+    };
 
     -- Phials:
     ["PHIAL_CRIMSON_EXTRACT"] = 0x411A2B85;

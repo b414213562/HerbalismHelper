@@ -18,13 +18,15 @@ function TargetWindow:Constructor()
     TargetWindow.instance = self;
 
     -- other initialization here:
-    self:SetSize(314, 80);
+    self:SetSize(
+        _IMAGES.OPPONENT_VITALS_BACKGROUND.WIDTH,
+        _IMAGES.OPPONENT_VITALS_BACKGROUND.HEIGHT);
     self:SetPosition(557, 150);
     self:SetBackground(_IMAGES.OPPONENT_VITALS_BACKGROUND.IMAGE);
-    self.leftMargin = 11;
-    self.topMargin = 9;
-    self.rightMargin = 11;
-    self.bottomMargin = 9;
+    self.leftMargin = 7;
+    self.topMargin = 6;
+    self.rightMargin = 6;
+    self.bottomMargin = 6;
 
     self.UsedOpacity = 1.0;
     self.UnusedOpacity = 0.25;
@@ -40,8 +42,9 @@ function TargetWindow:Constructor()
     local iconWidth = 32;
     local iconHeight = 32;
     local iconLeftMargin = 5;
-    local textTopMargin = 5;
+    local textTopMargin = 2;
     local expectedMinMaxWidth = 100;
+    local expectedMinMaxLeftMargin = 10;
 
     -- Opacity needs to be 25% or less to be obviously opaque. 
     -- It was hard to tell the difference for 60%+ or higher.
@@ -75,7 +78,7 @@ function TargetWindow:Constructor()
     expectedMinMaxText:SetParent(phialsControl);
     expectedMinMaxText:SetVisible(false);
     expectedMinMaxText:SetWidth(expectedMinMaxWidth);
-    expectedMinMaxText:SetPosition(self.PhialIcons[PHIAL_VIOLET]:GetLeft() + iconWidth + 0, iconHeight + textTopMargin);
+    expectedMinMaxText:SetPosition(self.PhialIcons[PHIAL_VERDANT]:GetLeft() + iconWidth + expectedMinMaxLeftMargin, iconHeight + textTopMargin);
     self.ExpectedMinMaxText = expectedMinMaxText;
 
 end
@@ -135,9 +138,9 @@ function TargetWindow:ShowLoot(herb)
             max = max + #flora.YIELDS;
         end
         if (min == max) then
-            expectedMinMax = " (" .. min  .. " total)";
+            expectedMinMax = "(" .. min  .. " total)";
         else
-            expectedMinMax = " (" .. min .. "-" .. max .. " total)";
+            expectedMinMax = "(" .. min .. "-" .. max .. " total)";
         end
     end
     if (expectedMinMax) then
