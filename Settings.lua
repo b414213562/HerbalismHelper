@@ -2,6 +2,8 @@
 SettingsDataScope = Turbine.DataScope.Character;
 SettingsFilename = "HerbalismHelper_Settings";
 
+DebugOutput = false;
+
 function LoadSettings()
     local loadedSettings = Turbine.PluginData.Load(SettingsDataScope, SettingsFilename);
 

@@ -18,5 +18,9 @@ function Debug(message)
         return;
     end
 
+    if (not DebugOutput) then
+        return;
+    end
+
     Turbine.Shell.WriteLine("<rgb=#FF5555>" .. message .. "</rgb>");
 end
