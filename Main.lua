@@ -14,6 +14,7 @@ import "CubePlugins.HerbalismHelper.Flora";
 import "CubePlugins.HerbalismHelper.Settings";
 import "CubePlugins.HerbalismHelper.Options";
 
+import "CubePlugins.HerbalismHelper.Libraries.DragBar.DragBar";
 import "CubePlugins.HerbalismHelper.Images";
 import "CubePlugins.HerbalismHelper.TargetWindow";
 
