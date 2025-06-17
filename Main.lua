@@ -18,6 +18,9 @@ import "CubePlugins.HerbalismHelper.Libraries.DragBar.DragBar";
 import "CubePlugins.HerbalismHelper.Images";
 import "CubePlugins.HerbalismHelper.TargetWindow";
 
+KEY_ACTION_TOGGLE_HUD = 0x100000B3;    -- F12
+KEY_ACTION_REPOSITION_UI = 0x1000007B; -- Ctrl + \
+
 LocalPlayer = Turbine.Gameplay.LocalPlayer.GetInstance();
 
 function RegisterTargetChanged()

@@ -25,6 +25,14 @@ function TargetWindow:Constructor()
         SETTINGS["OPPONENT_VITALS_WINDOW"].LEFT,
         SETTINGS["OPPONENT_VITALS_WINDOW"].TOP);
     self:SetBackground(_IMAGES.OPPONENT_VITALS_BACKGROUND.IMAGE);
+
+    self.KeyDown = function(sender, args) self:ProcessKeyDown(sender, args); end
+    self:SetWantsKeyEvents(true);
+
+    self.locked = true; -- can't be moved
+    self.shown = false;
+    self.hudHidden = false; -- set to true when hud is hidden
+
     self.leftMargin = 7;
     self.topMargin = 6;
     self.rightMargin = 6;
@@ -111,7 +119,8 @@ end
 
 function TargetWindow:ShowLoot(herb)
     if (not herb) then
-        self:SetVisible(false);
+        self.shown = false;
+        self:SetVisibility();
         return;
     end
 
@@ -176,6 +185,48 @@ function TargetWindow:ShowLoot(herb)
         self.ExpectedMinMaxText:SetVisible(false);
     end
 
-    -- Now that everything is ready, show the window:
-    self:SetVisible(true);
+    -- Now that everything is ready, show the window (if the UI is not hidden):
+    self.shown = true;
+    self:SetVisibility();
+end
+
+function TargetWindow:ProcessKeyDown(sender, args)
+    if (args.Action == KEY_ACTION_REPOSITION_UI) then
+        -- lock / unlock the control for movement
+		self:UiLocked(not self.locked);
+    elseif (args.Action == KEY_ACTION_TOGGLE_HUD) then
+        -- hide / show ui elements
+        self:UiHidden(not self.hudHidden);
+	end
+end
+
+function TargetWindow:UiLocked(locked)
+    self.locked = locked;
+    if (not self.locked) then
+        self.dragBar = CubePlugins.HerbalismHelper.Libraries.DragBar.DragBar(self, "Herbalism Helper");
+        self.dragBar:SetBarOnTop(true);
+        self.dragBar:SetBarVisible(true);
+        self.dragBar:SetDraggable(true);
+    else
+        if (self.dragBar ~= nil) then
+            self.dragBar:SetDraggable(false);
+            self.dragBar:SetTarget(nil);
+            self.dragBar = nil;
+        end
+
+        SETTINGS["OPPONENT_VITALS_WINDOW"].LEFT = self:GetLeft();
+        SETTINGS["OPPONENT_VITALS_WINDOW"].TOP = self:GetTop();
+
+        self:SetVisibility();
+    end
+end
+
+function TargetWindow:UiHidden(hide)
+	self.hudHidden = hide;
+
+    self:SetVisibility();
+end
+
+function TargetWindow:SetVisibility()
+    self:SetVisible(self.shown and not self.hudHidden);
 end
