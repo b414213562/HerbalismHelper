@@ -11,6 +11,7 @@ import "CubePlugins.HerbalismHelper.L.fr";
 import "CubePlugins.HerbalismHelper.GeneralFunctions";
 import "CubePlugins.HerbalismHelper.Flora";
 
+import "CubePlugins.HerbalismHelper.Settings";
 import "CubePlugins.HerbalismHelper.Images";
 import "CubePlugins.HerbalismHelper.TargetWindow";
 
@@ -77,8 +78,19 @@ function RegisterEquipmentChanged()
 
 end
 
+function RegisterForUnload()
+    Turbine.Plugin.Unload = function(sender, args)
+        SaveSettings();
+
+        Turbine.Shell.WriteLine(L["STATUS"].UNLOADED);
+    end
+end
+
 -- Do plugin startup things:
 function Main()
+    LoadSettings();
+    RegisterForUnload();
+
     RegisterTargetChanged();
     RegisterEquipmentChanged();
 

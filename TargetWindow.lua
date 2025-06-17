@@ -21,7 +21,9 @@ function TargetWindow:Constructor()
     self:SetSize(
         _IMAGES.OPPONENT_VITALS_BACKGROUND.WIDTH,
         _IMAGES.OPPONENT_VITALS_BACKGROUND.HEIGHT);
-    self:SetPosition(557, 150);
+    self:SetPosition(
+        SETTINGS["OPPONENT_VITALS_WINDOW"].LEFT,
+        SETTINGS["OPPONENT_VITALS_WINDOW"].TOP);
     self:SetBackground(_IMAGES.OPPONENT_VITALS_BACKGROUND.IMAGE);
     self.leftMargin = 7;
     self.topMargin = 6;
